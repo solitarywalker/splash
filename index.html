@@ -76,15 +76,18 @@
 
                     // Title
                     $("<td width='45%'>" +
-                        "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[
+                        "<a href='https://stellabms.xyz/lr2ir/md5/" + info[
                             i]
                         .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
 
                     // Artist
                     $("<td width='40%'>" + info[i].artist + "</td>").appendTo(str);
 
-                    // Comment
-                    $("<td width='10%'>" + info[i].comment + "</td>").appendTo(str);
+                    // URL
+                    $("<td width='10%'><a href=" + info[i].url + ">URL</a></td>").appendTo(str);
+
+                    // URL_DIFF
+                    $("<td width='10%'><a href=" + info[i].url_diff + ">URL</a></td>").appendTo(str);
                     str.appendTo(obj);
                     count++;
 
